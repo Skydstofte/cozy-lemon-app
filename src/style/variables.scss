@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Reenie+Beanie&display=swap');
+
+// fonts
+$font-one: 'Reenie Beanie', cursive;
+$font-two: 'Dosis', sans-serif;
+
+// colors
+$dark-green: #00433E;
+$light-green: #C1CEC1;
+$yellow: #FFE606;
+$light-yellow: #FFFDF0;
+
+// box-shadow
+$shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$drop-shadow: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: $font-two;
+    font-weight: 400;
+    height: 100vh;
+    background-color: $light-green;
+}

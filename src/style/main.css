@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Reenie+Beanie&display=swap");
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  background-color: #C1CEC1;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+}
+section .header {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+}
+section .header .logo img {
+  height: 120px;
+}
+section .header .logo h1 {
+  font-size: 60px;
+  margin: 0;
+  color: black;
+}
+
+.backgroundLemons {
+  position: fixed;
+  z-index: 1;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+}
+.backgroundLemons-top img {
+  width: 350px;
+  transform: translate(115px) rotate(80deg);
+}
+.backgroundLemons-bottom img {
+  width: 350px;
+  transform: translate(-100px);
+}
+
+.homePage {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.homePage .homePage-header {
+  width: 100%;
+  text-align: center;
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 400;
+  font-size: 68px;
+  margin: 100px auto 18px;
+  text-shadow: 2px 3px 4px gray;
+}
+.homePage-img-Maria {
+  width: 180px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.homePage-text-container {
+  width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 18px 0 0;
+}
+.homePage-text-container h2 {
+  font-size: 22px;
+  margin: 18px 0 0;
+  font-weight: 700;
+}
+.homePage-text-container p {
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 18px 18px;
+  margin: 0;
+  font-weight: 500;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+.homePage .homePage-RM-btn {
+  width: 180px;
+  height: 40px;
+  background-color: #00433E;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 18px;
+  position: relative;
+}
+.homePage .homePage-RM-btn img {
+  position: absolute;
+  right: 10px;
+  top: 25%;
+}/*# sourceMappingURL=main.css.map */

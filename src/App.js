@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import {Routes, Route} from "react-router-dom";
+import HomePage from'./page/HomePage';
+import IntroPosters from './page/IntroPosters';
+import IntroCrochet from './page/IntroCrochet';
+import IntroAboutUs from './page/IntroAboutUs';
+import ContactOrOrder from './page/ContactOrder';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/Plakater" element={<IntroPosters/>} />
+        <Route path="/HækledeBlomster" element={<IntroCrochet/>} />
+        <Route path="/OmCozyLemon" element={<IntroAboutUs/>} />
+        <Route path="/KontaktBestil" element={<ContactOrOrder/>} />
+      </Routes>
+    </main>
   );
 }
 

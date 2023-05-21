@@ -1,19 +1,18 @@
-import './App.css';
 import {Routes, Route} from "react-router-dom";
-import HomePage from'./page/HomePage';
-import IntroPosters from './page/IntroPosters';
-import IntroCrochet from './page/IntroCrochet';
-import IntroAboutUs from './page/IntroAboutUs';
-import ContactOrOrder from './page/ContactOrder';
+import HomePage from'./pages/HomePage';
+import Posters from './pages/Posters';
+import Crochet from './pages/Crochet';
+import AboutUs from './pages/AboutUs';
+import ContactOrOrder from './pages/ContactOrder';
 
 function App() {
   return (
     <main>
       <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="/Plakater" element={<IntroPosters/>} />
-        <Route path="/HækledeBlomster" element={<IntroCrochet/>} />
-        <Route path="/OmCozyLemon" element={<IntroAboutUs/>} />
+        <Route path="/Plakater" element={<Posters/>} />
+        <Route path="/HækledeBlomster" element={<Crochet/>} />
+        <Route path="/OmCozyLemon" element={<AboutUs/>} />
         <Route path="/KontaktBestil" element={<ContactOrOrder/>} />
       </Routes>
     </main>

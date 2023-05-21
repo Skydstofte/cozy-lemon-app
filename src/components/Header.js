@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import logo from '../images/clLogo.svg'
+import logo from '../images/logo.png'
+import Menu from '../components/Menu';
 
 export default function Header() {
     return (
@@ -7,6 +8,7 @@ export default function Header() {
             <NavLink to="/" className='logo'>
                 <img src={logo} alt="Cozy Lemon logo" />
             </NavLink>
+            <Menu></Menu>
         </section>
     )
 }

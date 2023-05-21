@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Reenie+Beanie&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  background-color: #C1CEC1;
+  position: relative;
+  height: 100vh;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #C1CEC1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFFDF0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00433E;
+}
+
+.backgroundLemons, .smallBackgroundLemons {
+  position: fixed;
+  z-index: 1;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.backgroundLemons-top, .smallBackgroundLemons-top {
+  position: fixed;
+  right: 0;
+}
+.backgroundLemons-top img, .smallBackgroundLemons-top img {
+  width: 350px;
+  transform: translate(115px) rotate(80deg);
+}
+.backgroundLemons-bottom, .smallBackgroundLemons-bottom {
+  position: fixed;
+  bottom: 0;
+}
+.backgroundLemons-bottom img, .smallBackgroundLemons-bottom img {
+  width: 350px;
+  transform: translate(-100px, 40px);
+}
+.backgroundLemons-one, .smallBackgroundLemons-one {
+  position: fixed;
+  transform: translate(49px, 90px) rotate(60deg);
+  right: 0;
+}
+.backgroundLemons-one img, .smallBackgroundLemons-one img {
+  width: 150px;
+}
+.backgroundLemons-two, .smallBackgroundLemons-two {
+  position: fixed;
+  transform: translate(-75px) rotate(-16deg);
+  bottom: 40%;
+}
+.backgroundLemons-two img, .smallBackgroundLemons-two img {
+  width: 150px;
+}
+.backgroundLemons-three, .smallBackgroundLemons-three {
+  position: fixed;
+  transform: translate(65px) rotate(-40deg);
+  bottom: 20%;
+  right: 0;
+}
+.backgroundLemons-three img, .smallBackgroundLemons-three img {
+  width: 150px;
+}
+.backgroundLemons-four, .smallBackgroundLemons-four {
+  position: fixed;
+  transform: translate(-20px) rotate(-2deg);
+  bottom: -50px;
+}
+.backgroundLemons-four img, .smallBackgroundLemons-four img {
+  width: 150px;
+}
+
+.posters, .flowers {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.posters-container, .flowers-container {
+  z-index: 2;
+  width: 100%;
+  margin: 0 auto 95px;
+}
+.posters-container-intro, .flowers-container-intro {
+  margin: 120px auto 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.posters-container-intro h1, .flowers-container-intro h1 {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  word-spacing: -5px;
+  margin: 18px 0;
+}
+.posters-container-intro p, .flowers-container-intro p {
+  font-size: 20px;
+  font-weight: 500;
+  width: 75%;
+  margin: 20px auto;
+}
+.posters-container-content-view, .flowers-container-content-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 4%;
+  margin: 0;
+  padding: 0;
+}
+.posters-container-content-view-product, .flowers-container-content-view-product {
+  width: 48%;
+  max-width: 250px;
+  background: #FFFDF0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  color: black;
+}
+.posters-container-content-view-product img, .flowers-container-content-view-product img {
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+.posters-container-content-view-product h3, .flowers-container-content-view-product h3 {
+  margin: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+.posters-container-content .product-overlay, .flowers-container-content .product-overlay {
+  position: fixed;
+  width: 90%;
+  max-width: 400px;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFDF0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  z-index: 10;
+  margin-top: 10px;
+}
+.posters-container-content .product-overlay-content, .flowers-container-content .product-overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.posters-container-content .product-overlay-content button, .flowers-container-content .product-overlay-content button {
+  float: right;
+  align-self: flex-end;
+  margin: 20px 20px 0 0;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  background: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+.posters-container-content .product-overlay-content button .cross-line-one, .posters-container-content .product-overlay-content button .cross-line-two, .flowers-container-content .product-overlay-content button .cross-line-one, .flowers-container-content .product-overlay-content button .cross-line-two {
+  position: absolute;
+  width: 35px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00433E;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.posters-container-content .product-overlay-content button .cross-line-one, .flowers-container-content .product-overlay-content button .cross-line-one {
+  transform: rotate(45deg) translate(-1px, -7px);
+}
+.posters-container-content .product-overlay-content button .cross-line-two, .flowers-container-content .product-overlay-content button .cross-line-two {
+  transform: rotate(135deg) translate(-7px, 1px);
+}
+.posters-container-content .product-overlay-content-image, .flowers-container-content .product-overlay-content-image {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.posters-container-content .product-overlay-content-image img, .flowers-container-content .product-overlay-content-image img {
+  height: 300px;
+  aspect-ratio: 3/4;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+.posters-container-content .product-overlay-content ul, .flowers-container-content .product-overlay-content ul {
+  font-size: 20px;
+  margin: 20px 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.posters-container-content .product-overlay-content ul li, .flowers-container-content .product-overlay-content ul li {
+  padding: 0 20px;
+  display: inline-block;
+  list-style-type: none;
+}
+.posters .overlay-background, .flowers .overlay-background {
+  display: none;
+  background-color: rgb(48, 48, 48);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}/*# sourceMappingURL=products.css.map */

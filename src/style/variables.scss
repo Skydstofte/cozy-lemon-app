@@ -9,12 +9,82 @@ $dark-green: #00433E;
 $light-green: #C1CEC1;
 $yellow: #FFE606;
 $light-yellow: #FFFDF0;
+$white-background: rgba(255, 255, 255, 0.4);
 
 // box-shadow
 $shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 $drop-shadow: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
+// corners
+$border-radius: 8px;
 
+// Mixins
+
+// h1 
+@mixin h1 {
+  font-family: $font-one;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  word-spacing: -5px;
+}
+
+// h1 for frontpage
+@mixin h1-frontpage {
+  font-family: $font-one;
+  font-size: 44px;
+  font-weight: 400;
+  text-align: center;
+  word-spacing: -5px;
+}
+
+// h2
+@mixin h2 {
+  font-family: $font-two;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+}
+
+// p
+@mixin p {
+  font-family: $font-two;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+// buttons
+@mixin btn {
+  width: 180px;
+  height: 40px;
+  background-color: $dark-green;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 0;
+  box-shadow: $shadow;
+  margin: 20px 0 20px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// Overall styling, that applies to all of the code
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-two;
+  font-weight: 400;
+  height: 100vh;
+  background-color: $light-green;
+  position: relative;
+  height: 100vh;
+}
+
+// Styling for links 
 a:link {
   text-decoration: none;
 }
@@ -28,10 +98,89 @@ a:active {
   text-decoration: none;
 }
 
-body {
-    margin: 0;
-    font-family: $font-two;
-    font-weight: 400;
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: $light-green;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $light-yellow;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $dark-green;
+}
+
+// Background lemons styling 
+.backgroundLemons, .smallBackgroundLemons {
+    position: fixed;
+    z-index: 1;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
     height: 100vh;
-    background-color: $light-green;
+
+    &-top {
+        position: fixed;
+        right: 0;
+        img {
+            width: 350px;
+            transform: translate(115px) rotate(80deg);
+        }
+    }
+
+    &-bottom {
+        position: fixed;
+        bottom: 0;
+
+        img {
+            width: 350px;
+            transform: translate(-100px, 40px);
+        }
+    }
+
+    &-one {
+        position: fixed;
+        transform: translate(49px, 90px) rotate(60deg);
+        right: 0;
+    
+        img {
+            width: 150px;
+        }
+    }
+    
+    &-two {
+        position: fixed;
+        transform: translate(-75px) rotate(-16deg);
+        bottom: 40%;
+    
+        img {
+            width: 150px;
+        }
+    }
+    
+    &-three {
+        position: fixed;
+        transform: translate(65px) rotate(-40deg);
+        bottom: 20%;
+        right: 0;
+    
+        img {
+            width: 150px;
+        }
+    }
+    
+    &-four {
+        position: fixed;
+        transform: translate(-20px) rotate(-2deg);
+        bottom: -50px;
+    
+        img {
+            width: 150px;
+        }
+    }
 }

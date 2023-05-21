@@ -1,4 +1,4 @@
-import BgLemon from '../images/bgLemon.svg'
+import BgLemon from '../images/bgLemon.png'
 
 export default function BgLemons() {
     return (

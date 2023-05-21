@@ -1,8 +1,7 @@
-// import logo from '../images/clLogo.svg'
-import logoNoText from '../images/bgLemon.svg'
-import poster from '../images/postericon.svg'
-import crochet from '../images/crocheticon.svg'
-import contact from '../images/contacticon.svg'
+import logoNoText from '../images/bgLemon.png'
+import poster from '../images/postericon.png'
+import crochet from '../images/crocheticon.png'
+import contact from '../images/contacticon.png'
 import instragram from '../images/Instagram_Glyph_Black.svg'
 import React, { useState } from 'react'
 import { NavLink } from "react-router-dom";
@@ -30,11 +29,11 @@ export default function Menu() {
 
     return (
         <section className='burger-menu'>
-            <div className='burger-menu-cross' onClick={updateMenu}>
+            <button className='burger-menu-cross' aria-label='Menu' onClick={updateMenu}>
                 <div className={menu_class}></div>
                 <div className={menu_class}></div>
                 <div className={menu_class}></div>
-            </div>
+            </button>
             <ul className={menu_container_class}>
                 <li className='burger-menu-container-item'>
                     <NavLink to="/Plakater" className="burger-menu-container-item-navLink">
@@ -57,12 +56,19 @@ export default function Menu() {
                 <li className='burger-menu-container-item'>
                     <NavLink to="/OmCozyLemon" className="burger-menu-container-item-navLink">
                         <img id='aboutIcon' src={logoNoText} alt="Cozy Lemon logo" />
-                        <p>Om Cosy Lemon</p>
+                        <p>Om Cozy Lemon</p>
                     </NavLink>
                 </li>
                 <div className='burger-menu-container-line'></div>
+                <div className='burger-menu-container-bottomInfo'>
+                    <h5>Betaling</h5>
+                    <p>Betaling foregår med mobilpay. Nummeret sendes sammen med bekræftigelsesmailen.</p>
+                    <p>Stand hos DesignHub: </p>
+                    <address>Bredgade 45, 7400 Herning</address>
+                    <p id='email'>Email: <a href = "mailto: cozy.lemon1@gmail.com">cozy.lemon1@gmail.com</a></p>
+                    <h4>Af Maria St. Christiansen</h4>
+                </div>
                 <a className='burger-menu-container-soMe' href="https://www.instagram.com/cozy_lemon_/">
-                    <p>Af Maria St. Christiansen</p>
                     <img src={instragram} alt="Instagram" />
                 </a>
             </ul>

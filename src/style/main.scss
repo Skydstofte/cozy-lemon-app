@@ -1,12 +1,11 @@
 @import "./variables.scss";
 
+// Header styling
 section {
-    position: relative;
-    height: 100vh;
-
     .header {
         width: 100%;
         height: fit-content;
+        width: fit-content;
         position: fixed;
         z-index: 4;
         top: 0;
@@ -14,7 +13,8 @@ section {
 
         .logo {
             img {
-                height: 120px;
+                height: 92px;
+                margin: 13px 0 0 9px;
             }
 
             h1 {
@@ -26,98 +26,172 @@ section {
     }
 }
 
-.backgroundLemons {
-    position: fixed;
-    z-index: 1;
-    opacity: 0.3;
-    top: 0;
-    left: 0;
+.container {
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
 
-    &-top {
-        img {
-            width: 350px;
-            transform: translate(115px) rotate(80deg);
-        }
-    }
+    .homePage {
+        position: absolute;
+        z-index: 1;
+        margin: 105px auto 0;
+        padding-bottom: 55px;
+        width: 100%;
 
-    &-bottom {
-        img {
-            width: 350px;
-            transform: translate(-100px);
+        &-intro, &-poster, &-flower, &-contact {
+            margin: 0 auto 40px;
+            width: 80%;
+            max-width: 400px;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: $light-yellow;
+            border-radius: $border-radius;
+            box-shadow: $shadow;
+            
+            &-header {
+                @include h1-frontpage;
+                width: 100%;
+                margin: 0 auto 10px;
+            }
+
+            &-img-Maria {
+                width: 160px;
+                margin: 20px auto;
+                border-radius: 8px;
+                box-shadow: $shadow;
+            }
+
+            &-img-icon {
+                width: 140px;
+                margin: 10px auto 0;
+            }
+
+            #posterIcon {
+                margin: 40px auto 10px;
+            }
+            #flowerIcon {
+                margin: 0 auto 10px;
+            }
+            #contactIcon {
+                margin: 40px auto 20px;
+            }
+
+            h1 {
+                margin: 18px 0 0;
+                @include h1-frontpage;
+
+                // img {
+                //     width: 38px;
+                //     margin: 0 0 -6px 0;
+                // }
+            }
+            &-text-container {
+                width: 70%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                
+
+                p {
+                    @include p;
+                    display: inline-block;
+                    margin: 10px 0 0 0;
+                }
+            }
+
+            &-readMore-btn {
+                @include btn;
+            }
         }
     }
 }
 
-.homePage {
-    position: absolute;
+.overlay {
+    display: none;
+}
+
+.overlay-visible {
+    display: block;
+    background-color: rgb(48, 48, 48);
+    position: fixed;
+    height: 100vh;
     width: 100%;
+    opacity: 0.5;
     z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    .homePage-header {
-        width: 100%;
-        text-align: center;
-        font-family: $font-one;
-        font-weight: 400;
-        font-size: 68px;
-        margin: 100px auto 18px;
-        text-shadow: 2px 3px 4px gray;
-    }
+    left: 0;
+    top: 0;
+}
 
-    &-img-Maria {
-        width: 180px;
-        margin: 0 auto;
-        border-radius: 8px;
-        box-shadow: $shadow;
-    }
-
-    &-text-container {
-        width: 80%;
-        height: fit-content;
-        background-color: white;
-        border-radius: 8px;
+// Info button 
+.InfoBtn {
+    .tooltip-btn {
+        position: fixed;
+        z-index: 4;
+        bottom: 20px;
+        right: 20px;
+        padding: 0;
+        height: 55px;
+        width: 55px;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        margin: 18px 0 0;
-        
+        border-radius: $border-radius;
+        background-color: $dark-green;
+        box-shadow: $shadow;
+        border-width: 0;
+
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    .info-container {
+        display: none;
+        width: 80%;
+        position: fixed;
+        z-index: 4;
+        background-color: $light-yellow;
+        border-radius: $border-radius;
+        box-shadow: $shadow;
+        padding: 0 20px 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
         h2 {
+            margin: 20px 0 0 0;
             font-size: 22px;
-            margin: 18px 0 0;
-            font-weight: 700;
         }
 
         p {
             font-size: 18px;
-            display: inline-block;
-            padding: 10px 18px 18px;
-            margin: 0;
             font-weight: 500;
-            box-shadow: $shadow;
-            border-radius: 8px;
+            margin: 0 0 0 0;
         }
     }
 
-    .homePage-RM-btn {
-        width: 180px;
-        height: 40px;
-        background-color: $dark-green;
-        color: white;
-        font-size: 20px;
-        font-weight: 500;
-        border-radius: 8px;
-        border: 0;
-        box-shadow: $shadow;
-        margin-top: 18px;
-        position: relative;
+    .info-visible {
+        display: block;
+    }
+    .info-overlay {
+        background-color: rgb(48, 48, 48);
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        opacity: 0.5;
+        z-index: 3;
+        left: 0;
+        top: 0;
+        display: none;
+    }
 
-        img {
-            position: absolute;
-            right: 10px;
-            top: 25%;
-        }
+    .info-overlay-visible {
+        display: block;
     }
 }

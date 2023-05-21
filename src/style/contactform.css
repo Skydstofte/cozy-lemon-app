@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Reenie+Beanie&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  background-color: #C1CEC1;
+  position: relative;
+  height: 100vh;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #C1CEC1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFFDF0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00433E;
+}
+
+.backgroundLemons, .smallBackgroundLemons {
+  position: fixed;
+  z-index: 1;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.backgroundLemons-top, .smallBackgroundLemons-top {
+  position: fixed;
+  right: 0;
+}
+.backgroundLemons-top img, .smallBackgroundLemons-top img {
+  width: 350px;
+  transform: translate(115px) rotate(80deg);
+}
+.backgroundLemons-bottom, .smallBackgroundLemons-bottom {
+  position: fixed;
+  bottom: 0;
+}
+.backgroundLemons-bottom img, .smallBackgroundLemons-bottom img {
+  width: 350px;
+  transform: translate(-100px, 40px);
+}
+.backgroundLemons-one, .smallBackgroundLemons-one {
+  position: fixed;
+  transform: translate(49px, 90px) rotate(60deg);
+  right: 0;
+}
+.backgroundLemons-one img, .smallBackgroundLemons-one img {
+  width: 150px;
+}
+.backgroundLemons-two, .smallBackgroundLemons-two {
+  position: fixed;
+  transform: translate(-75px) rotate(-16deg);
+  bottom: 40%;
+}
+.backgroundLemons-two img, .smallBackgroundLemons-two img {
+  width: 150px;
+}
+.backgroundLemons-three, .smallBackgroundLemons-three {
+  position: fixed;
+  transform: translate(65px) rotate(-40deg);
+  bottom: 20%;
+  right: 0;
+}
+.backgroundLemons-three img, .smallBackgroundLemons-three img {
+  width: 150px;
+}
+.backgroundLemons-four, .smallBackgroundLemons-four {
+  position: fixed;
+  transform: translate(-20px) rotate(-2deg);
+  bottom: -50px;
+}
+.backgroundLemons-four img, .smallBackgroundLemons-four img {
+  width: 150px;
+}
+
+.ContactOrOrder {
+  width: 100%;
+}
+.ContactOrOrder .contact-container {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 400px;
+  gap: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ContactOrOrder .contact-container h1 {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  word-spacing: -5px;
+  margin: 0;
+}
+.ContactOrOrder .contact-container #choose-subject {
+  padding: 10px;
+  font-family: "Dosis", sans-serif;
+  font-size: 22px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: black;
+}
+.ContactOrOrder .contact-container-chosen-subject {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.ContactOrOrder .contact-container-chosen-subject input {
+  font-family: "Dosis", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  width: 100%;
+}
+.ContactOrOrder .contact-container-chosen-subject #city-info {
+  display: flex;
+  gap: 18px;
+}
+.ContactOrOrder .contact-container-chosen-subject #city-info #zip-code {
+  width: 60%;
+}
+.ContactOrOrder .contact-container-chosen-subject textarea {
+  font-family: "Dosis", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 380px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.ContactOrOrder .contact-container-chosen-subject button {
+  background-image: url(../images/contacticon.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  height: 87px;
+  width: 136px;
+  margin: 0 auto;
+  font-size: 35px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  color: black;
+}
+
+.contactform-submitted-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+.contactform-submitted-content h2 {
+  font-family: "Dosis", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+}
+.contactform-submitted-content p {
+  font-family: "Dosis", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.contactform-submitted-content a {
+  width: 180px;
+  height: 40px;
+  background-color: #00433E;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 20px 0 20px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}/*# sourceMappingURL=contactform.css.map */

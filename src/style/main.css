@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Reenie+Beanie&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  background-color: #C1CEC1;
+  position: relative;
+  height: 100vh;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -15,29 +26,94 @@ a:active {
   text-decoration: none;
 }
 
-body {
-  margin: 0;
-  font-family: "Dosis", sans-serif;
-  font-weight: 400;
-  height: 100vh;
-  background-color: #C1CEC1;
+::-webkit-scrollbar {
+  width: 15px;
 }
 
-section {
-  position: relative;
+::-webkit-scrollbar-track {
+  background: #C1CEC1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFFDF0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00433E;
+}
+
+.backgroundLemons, .smallBackgroundLemons {
+  position: fixed;
+  z-index: 1;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
   height: 100vh;
 }
+.backgroundLemons-top, .smallBackgroundLemons-top {
+  position: fixed;
+  right: 0;
+}
+.backgroundLemons-top img, .smallBackgroundLemons-top img {
+  width: 350px;
+  transform: translate(115px) rotate(80deg);
+}
+.backgroundLemons-bottom, .smallBackgroundLemons-bottom {
+  position: fixed;
+  bottom: 0;
+}
+.backgroundLemons-bottom img, .smallBackgroundLemons-bottom img {
+  width: 350px;
+  transform: translate(-100px, 40px);
+}
+.backgroundLemons-one, .smallBackgroundLemons-one {
+  position: fixed;
+  transform: translate(49px, 90px) rotate(60deg);
+  right: 0;
+}
+.backgroundLemons-one img, .smallBackgroundLemons-one img {
+  width: 150px;
+}
+.backgroundLemons-two, .smallBackgroundLemons-two {
+  position: fixed;
+  transform: translate(-75px) rotate(-16deg);
+  bottom: 40%;
+}
+.backgroundLemons-two img, .smallBackgroundLemons-two img {
+  width: 150px;
+}
+.backgroundLemons-three, .smallBackgroundLemons-three {
+  position: fixed;
+  transform: translate(65px) rotate(-40deg);
+  bottom: 20%;
+  right: 0;
+}
+.backgroundLemons-three img, .smallBackgroundLemons-three img {
+  width: 150px;
+}
+.backgroundLemons-four, .smallBackgroundLemons-four {
+  position: fixed;
+  transform: translate(-20px) rotate(-2deg);
+  bottom: -50px;
+}
+.backgroundLemons-four img, .smallBackgroundLemons-four img {
+  width: 150px;
+}
+
 section .header {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   position: fixed;
   z-index: 4;
   top: 0;
   left: 0;
 }
 section .header .logo img {
-  height: 120px;
+  height: 92px;
+  margin: 13px 0 0 9px;
 }
 section .header .logo h1 {
   font-size: 60px;
@@ -45,72 +121,86 @@ section .header .logo h1 {
   color: black;
 }
 
-.backgroundLemons {
-  position: fixed;
-  z-index: 1;
-  opacity: 0.3;
-  top: 0;
-  left: 0;
+.container {
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
-.backgroundLemons-top img {
-  width: 350px;
-  transform: translate(115px) rotate(80deg);
-}
-.backgroundLemons-bottom img {
-  width: 350px;
-  transform: translate(-100px);
-}
-
-.homePage {
+.container .homePage {
   position: absolute;
-  width: 100%;
   z-index: 1;
+  margin: 105px auto 0;
+  padding-bottom: 55px;
+  width: 100%;
+}
+.container .homePage-intro, .container .homePage-poster, .container .homePage-flower, .container .homePage-contact {
+  margin: 0 auto 40px;
+  width: 80%;
+  max-width: 400px;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.homePage .homePage-header {
-  width: 100%;
-  text-align: center;
-  font-family: "Reenie Beanie", cursive;
-  font-weight: 400;
-  font-size: 68px;
-  margin: 100px auto 18px;
-  text-shadow: 2px 3px 4px gray;
-}
-.homePage-img-Maria {
-  width: 180px;
-  margin: 0 auto;
+  background-color: #FFFDF0;
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.homePage-text-container {
-  width: 80%;
+.container .homePage-intro-header, .container .homePage-poster-header, .container .homePage-flower-header, .container .homePage-contact-header {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 44px;
+  font-weight: 400;
+  text-align: center;
+  word-spacing: -5px;
+  width: 100%;
+  margin: 0 auto 10px;
+}
+.container .homePage-intro-img-Maria, .container .homePage-poster-img-Maria, .container .homePage-flower-img-Maria, .container .homePage-contact-img-Maria {
+  width: 160px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.container .homePage-intro-img-icon, .container .homePage-poster-img-icon, .container .homePage-flower-img-icon, .container .homePage-contact-img-icon {
+  width: 140px;
+  margin: 10px auto 0;
+}
+.container .homePage-intro #posterIcon, .container .homePage-poster #posterIcon, .container .homePage-flower #posterIcon, .container .homePage-contact #posterIcon {
+  margin: 40px auto 10px;
+}
+.container .homePage-intro #flowerIcon, .container .homePage-poster #flowerIcon, .container .homePage-flower #flowerIcon, .container .homePage-contact #flowerIcon {
+  margin: 0 auto 10px;
+}
+.container .homePage-intro #contactIcon, .container .homePage-poster #contactIcon, .container .homePage-flower #contactIcon, .container .homePage-contact #contactIcon {
+  margin: 40px auto 20px;
+}
+.container .homePage-intro h1, .container .homePage-poster h1, .container .homePage-flower h1, .container .homePage-contact h1 {
+  margin: 18px 0 0;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 44px;
+  font-weight: 400;
+  text-align: center;
+  word-spacing: -5px;
+}
+.container .homePage-intro-text-container, .container .homePage-poster-text-container, .container .homePage-flower-text-container, .container .homePage-contact-text-container {
+  width: 70%;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: white;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 18px 0 0;
-}
-.homePage-text-container h2 {
-  font-size: 22px;
-  margin: 18px 0 0;
-  font-weight: 700;
-}
-.homePage-text-container p {
-  font-size: 18px;
-  display: inline-block;
-  padding: 10px 18px 18px;
   margin: 0;
-  font-weight: 500;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
 }
-.homePage .homePage-RM-btn {
+.container .homePage-intro-text-container p, .container .homePage-poster-text-container p, .container .homePage-flower-text-container p, .container .homePage-contact-text-container p {
+  font-family: "Dosis", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 10px 0 0 0;
+}
+.container .homePage-intro-readMore-btn, .container .homePage-poster-readMore-btn, .container .homePage-flower-readMore-btn, .container .homePage-contact-readMore-btn {
   width: 180px;
   height: 40px;
   background-color: #00433E;
@@ -120,11 +210,84 @@ section .header .logo h1 {
   border-radius: 8px;
   border: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-top: 18px;
+  margin: 20px 0 20px 0;
   position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.homePage .homePage-RM-btn img {
-  position: absolute;
-  right: 10px;
-  top: 25%;
+
+.overlay {
+  display: none;
+}
+
+.overlay-visible {
+  display: block;
+  background-color: rgb(48, 48, 48);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.InfoBtn .tooltip-btn {
+  position: fixed;
+  z-index: 4;
+  bottom: 20px;
+  right: 20px;
+  padding: 0;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #00433E;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-width: 0;
+}
+.InfoBtn .tooltip-btn img {
+  transform: rotate(180deg);
+}
+.InfoBtn .info-container {
+  display: none;
+  width: 80%;
+  position: fixed;
+  z-index: 4;
+  background-color: #FFFDF0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0 20px 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.InfoBtn .info-container h2 {
+  margin: 20px 0 0 0;
+  font-size: 22px;
+}
+.InfoBtn .info-container p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 0 0;
+}
+.InfoBtn .info-visible {
+  display: block;
+}
+.InfoBtn .info-overlay {
+  background-color: rgb(48, 48, 48);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.InfoBtn .info-overlay-visible {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

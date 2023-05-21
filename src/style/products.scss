@@ -1,0 +1,162 @@
+@import "./variables.scss";
+
+.posters, .flowers {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+    &-container {
+        z-index: 2;
+        width: 100%;
+        margin: 0 auto 95px;
+
+        &-intro {
+            margin: 120px auto 0;
+            width: fit-content;
+            
+            h1 {
+                @include h1;
+                margin: 18px 0;
+            }
+
+            p {
+                font-size: 20px;
+                font-weight: 500;
+                width: 75%;
+                margin: 20px auto;
+            }
+        }
+
+        &-content {
+
+            &-view {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px 4%;
+                margin: 0;
+                padding: 0;
+
+                &-product {
+                    width: 48%;
+                    max-width: 250px;
+                    background: $light-yellow;
+                    box-shadow: $shadow;
+                    border-radius: $border-radius;
+                    display: flex;
+                    justify-content: left;
+                    align-items: flex-end;
+                    flex-wrap: wrap;
+                    color: black;
+
+                    img {
+                        width: 90%;
+                        margin: 10px auto;
+                        border-radius: $border-radius;
+                    }
+
+                    h3 {
+                        margin: 10px;
+                        font-weight: 500;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .product-overlay {
+                position: fixed;
+                width: 90%;
+                max-width: 400px;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $light-yellow;
+                box-shadow: $shadow;
+                border-radius: $border-radius;
+                z-index: 10;
+                margin-top: 10px;
+                
+                &-content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    margin: 0 auto;
+
+                    button {
+                        float: right;
+                        align-self: flex-end;
+                        margin: 20px 20px 0 0;
+                        padding: 0;
+                        width: 35px;
+                        height: 35px;
+                        background: none;
+                        border: none;
+                        position: relative;
+                        cursor: pointer;
+
+                        .cross-line-one, .cross-line-two {
+                            position: absolute;
+                            width: 35px;
+                            height: 4px;
+                            border-radius: $border-radius;
+                            background-color: $dark-green;
+                            box-shadow: $shadow;
+                        }
+                        
+                        .cross-line-one {
+                            transform: rotate(45deg) translate(-1px, -7px);
+                        }
+                        
+                        .cross-line-two {
+                            transform: rotate(135deg) translate(-7px, 1px);
+                        }
+                    }
+
+                    &-image {
+                        width: 90%;
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            height: 300px;
+                            aspect-ratio: 3/4;
+                            object-fit: contain;
+                            border-radius: $border-radius;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    ul {
+                        font-size: 20px;
+                        margin: 20px 0;
+                        padding: 0;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        
+                        li {
+                            padding: 0 20px;
+                            display: inline-block;
+                            list-style-type: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .overlay-background {
+        display: none;
+        background-color: rgb(48, 48, 48);
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        opacity: 0.5;
+        z-index: 1;
+        left: 0;
+        top: 0;
+    }
+}

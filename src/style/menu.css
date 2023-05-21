@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Reenie+Beanie&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  background-color: #C1CEC1;
+  position: relative;
+  height: 100vh;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -15,12 +26,78 @@ a:active {
   text-decoration: none;
 }
 
-body {
-  margin: 0;
-  font-family: "Dosis", sans-serif;
-  font-weight: 400;
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #C1CEC1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFFDF0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00433E;
+}
+
+.backgroundLemons, .smallBackgroundLemons {
+  position: fixed;
+  z-index: 1;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
   height: 100vh;
-  background-color: #C1CEC1;
+}
+.backgroundLemons-top, .smallBackgroundLemons-top {
+  position: fixed;
+  right: 0;
+}
+.backgroundLemons-top img, .smallBackgroundLemons-top img {
+  width: 350px;
+  transform: translate(115px) rotate(80deg);
+}
+.backgroundLemons-bottom, .smallBackgroundLemons-bottom {
+  position: fixed;
+  bottom: 0;
+}
+.backgroundLemons-bottom img, .smallBackgroundLemons-bottom img {
+  width: 350px;
+  transform: translate(-100px, 40px);
+}
+.backgroundLemons-one, .smallBackgroundLemons-one {
+  position: fixed;
+  transform: translate(49px, 90px) rotate(60deg);
+  right: 0;
+}
+.backgroundLemons-one img, .smallBackgroundLemons-one img {
+  width: 150px;
+}
+.backgroundLemons-two, .smallBackgroundLemons-two {
+  position: fixed;
+  transform: translate(-75px) rotate(-16deg);
+  bottom: 40%;
+}
+.backgroundLemons-two img, .smallBackgroundLemons-two img {
+  width: 150px;
+}
+.backgroundLemons-three, .smallBackgroundLemons-three {
+  position: fixed;
+  transform: translate(65px) rotate(-40deg);
+  bottom: 20%;
+  right: 0;
+}
+.backgroundLemons-three img, .smallBackgroundLemons-three img {
+  width: 150px;
+}
+.backgroundLemons-four, .smallBackgroundLemons-four {
+  position: fixed;
+  transform: translate(-20px) rotate(-2deg);
+  bottom: -50px;
+}
+.backgroundLemons-four img, .smallBackgroundLemons-four img {
+  width: 150px;
 }
 
 .burger-menu {
@@ -28,25 +105,29 @@ body {
   width: 55px;
   background-color: #00433E;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   padding: 0;
   margin: 0;
   border-radius: 8px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 3;
 }
 .burger-menu-cross {
   width: 100%;
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   z-index: 3;
+  border-radius: 8px;
+  background-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-width: 0;
+  cursor: pointer;
 }
 .burger-menu-cross-line {
   width: 35px;
@@ -64,16 +145,17 @@ body {
 .burger-menu .visible {
   display: flex;
   position: fixed;
-  right: 10px;
-  bottom: 60px;
+  right: 20px;
+  top: 75px;
   background-color: #C1CEC1;
   border-radius: 8px;
-  width: 70%;
+  width: 80%;
+  max-width: 310px;
   height: -moz-fit-content;
   height: fit-content;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0 15px;
+  padding: 30px 0 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 300;
   opacity: 1;
@@ -82,11 +164,11 @@ body {
 .burger-menu .visible .burger-menu-container-item {
   list-style: none;
   width: 90%;
-  height: 55px;
+  height: 45px;
   border-radius: 8px;
   background-color: #00433E;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .burger-menu .visible .burger-menu-container-item-navLink {
   display: flex;
@@ -97,24 +179,24 @@ body {
   position: absolute;
 }
 .burger-menu .visible .burger-menu-container-item-navLink #posterIcon {
-  width: 85px;
-  margin-left: 0;
+  width: 65px;
+  margin: -5px 0 0 0;
 }
 .burger-menu .visible .burger-menu-container-item-navLink #crochetIcon {
-  width: 85px;
-  margin-left: 5px;
+  width: 70px;
+  margin: -15px 0 0 5px;
 }
 .burger-menu .visible .burger-menu-container-item-navLink #contactIcon {
-  width: 90px;
-  margin: 9px 0 0 5px;
+  width: 70px;
+  margin: -3px 0 0 5px;
 }
 .burger-menu .visible .burger-menu-container-item-navLink #aboutIcon {
-  width: 100px;
-  margin-left: 0;
+  width: 80px;
+  margin: -10px 0 0 0;
 }
 .burger-menu .visible .burger-menu-container-item-navLink p {
   color: white;
-  margin-left: 95px;
+  margin: -13px 0 0 95px;
   font-size: 18px;
 }
 .burger-menu .visible .burger-menu-container-item:last-of-type {
@@ -122,9 +204,34 @@ body {
 }
 .burger-menu .visible .burger-menu-container-line {
   width: 90%;
-  height: 3px;
+  height: 4px;
   background-color: #00433E;
   border-radius: 8px;
+}
+.burger-menu .visible .burger-menu-container-bottomInfo h5 {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.burger-menu .visible .burger-menu-container-bottomInfo p {
+  margin: 0 auto 10px;
+  width: 90%;
+}
+.burger-menu .visible .burger-menu-container-bottomInfo address {
+  margin: -10px auto 10px;
+  width: 90%;
+}
+.burger-menu .visible .burger-menu-container-bottomInfo a {
+  color: black;
+}
+.burger-menu .visible .burger-menu-container-bottomInfo #email {
+  margin-top: -10px;
+}
+.burger-menu .visible .burger-menu-container-bottomInfo h4 {
+  text-align: center;
+  margin: 0 auto 10px;
+  font-size: 20px;
 }
 .burger-menu .visible .burger-menu-container-soMe {
   width: 100%;
@@ -132,19 +239,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.burger-menu .visible .burger-menu-container-soMe p {
-  color: black;
-  font-size: 18px;
-  margin: 10px auto;
+  border-radius: 8px;
 }
 .burger-menu .visible .burger-menu-container-soMe img {
   height: 40px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
+  border-radius: 11px;
 }
 .burger-menu .clicked:nth-child(1) {
-  transform: rotate(45deg) translate(10px, 8px);
+  transform: rotate(45deg) translate(10px, 10px);
   transition: ease-out 0.2s;
 }
 .burger-menu .clicked:nth-child(2) {
@@ -152,7 +255,7 @@ body {
   transition: ease-out 0.2s;
 }
 .burger-menu .clicked:nth-child(3) {
-  transform: rotate(135deg) translate(-10px, 9px);
+  transform: rotate(135deg) translate(-10px, 10px);
   transition: ease-out 0.2s;
 }
 .burger-menu .unclicked {

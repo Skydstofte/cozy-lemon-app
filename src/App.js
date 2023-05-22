@@ -10,10 +10,10 @@ function App() {
     <main>
       <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="/Plakater" element={<Posters/>} />
+        <Route path="/CitatPlakater" element={<Posters/>} />
         <Route path="/HækledeBlomster" element={<Crochet/>} />
         <Route path="/OmCozyLemon" element={<AboutUs/>} />
-        <Route path="/KontaktBestil" element={<ContactOrOrder/>} />
+        <Route path="/BestilKontakt" element={<ContactOrOrder/>} />
       </Routes>
     </main>
   );
